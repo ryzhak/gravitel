@@ -1,0 +1,23 @@
+{
+    "name": "ryzhak/gravitel",
+    "type": "yii2-extension",
+    "description": "Yii2 module for Gravitel integration",
+    "keywords": ["yii2","gravitel","module"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ryzhak Vladimir",
+            "email": "ryzhak.vladimir@gmail.com",
+            "homepage": "http://www.ryzhak.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ryzhak\\gravitel\\": ""
+        }
+    }
+}
