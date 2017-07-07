@@ -15,6 +15,7 @@ class GravitelModule extends Module
     const CMD_ACCOUNTS = 'accounts';
     const CMD_MAKE_CALL = 'makeCall';
     const CMD_HISTORY = 'history';
+    const CMD_SUBSCRIBE_ON_CALLS = 'subscribeoncalls';
     const CMD_EVENT = 'event';
     const CMD_CONTACT = 'contact';
 
@@ -201,7 +202,15 @@ class GravitelModule extends Module
 
     }
 
-    // TODO: fix
+    /**
+     * Gravitel API function.
+     * Subscribes user to phone calls. Kind of setting him offline or online.
+     *
+     * @param string $user User login in gravitel.
+     * @param string $status Status. On or off.
+     * @return mixed
+     * @throws Exception
+     */
     public function subscribeOnCalls($user = null, $status = self::USER_STATUS_ON) {
 
         if(!$user) throw new Exception('user can not be empty');
@@ -212,7 +221,7 @@ class GravitelModule extends Module
             'status' => $status
         ];
 
-        return $this->makeRequest(self::CMD_ACCOUNTS, $data);
+        return $this->makeRequest(self::CMD_SUBSCRIBE_ON_CALLS, $data);
 
     }
 
