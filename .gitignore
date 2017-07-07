@@ -3,3 +3,7 @@
 
 # composer vendor dir
 /vendor
+tests/_output/*
+
+# test params
+tests/config/params.php
