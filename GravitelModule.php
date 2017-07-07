@@ -97,7 +97,10 @@ class GravitelModule extends Module
         $context  = stream_context_create($options);
         $result = file_get_contents($this->gravitelUrl, false, $context);
 
-        return $cmd == self::CMD_HISTORY ? $this->parseCsv($result) : Json::decode($result);
+        if($cmd == self::CMD_HISTORY) return $this->parseCsv($result);
+        if($cmd == self::CMD_SUBSCRIBE_ON_CALLS) return $result;
+
+        return Json::decode($result);
 
     }
 
