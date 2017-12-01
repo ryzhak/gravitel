@@ -1,6 +1,6 @@
 Yii2 module for [Gravitel](http://www.gravitel.ru/).
 ====================================================
-Refer the full documentation at https://ats23.gravitel.ru/SkinFiles/ats23.gravitel.ru/Gravitel/crm_rest_api.pdf
+Refer the full documentation at http://www.gravitel.ru/upload/gravitel_rest_api.pdf
 
 Installation
 ============
